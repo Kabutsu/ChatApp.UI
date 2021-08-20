@@ -1,7 +1,13 @@
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
+import connectionManager from './utils/connectionManager';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    connectionManager.start();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={(e) => connectionManager.sendMessage('Sam', 'Hi')}>Click me!</button>
       </header>
     </div>
   );
