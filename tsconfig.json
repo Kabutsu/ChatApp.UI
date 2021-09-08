@@ -20,7 +20,7 @@
     ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,

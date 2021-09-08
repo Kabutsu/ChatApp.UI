@@ -1,0 +1,10 @@
+.c-input-text__container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.c-input-text__entry {
+    flex-grow: 1;
+}
