@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
-import connectionManager from './utils/connectionManager';
-import './App.css';
-import InputText from './components/input-text';
+import { useState } from 'react';
 
-function App() {
+import logo from 'src/images/logo.svg';
+
+import connectionManager from 'src/utils/connectionManager';
+import InputText from 'src/components/input-text';
+
+import './home.scss';
+
+const Home = () => {
   const [userName, setName] = useState<string>(null);
 
   const connect = () => {
@@ -22,14 +25,14 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="p-home">
+      <header className="p-home__header">
+        <img src={logo} className="p-home__logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="p-home__link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
